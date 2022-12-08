@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼(form) 연습 중</title>
+    <style>
+        .subm{ /* 버튼 스타일 */
+        display:block; /* 블록 레벨 요소 */
+        background-color:#fff; /* 배경색 */
+        border:1px solid #dedede; /* 테두리 */
+        cursor:pointer; /* 마우스 포인터 */
+        padding:5px 10px 6px 7px;/* 패딩 */
+        }
+        .subm img{ /* 버튼 내 왼쪽 이미지 */
+        border:0; /* 테두리 없음*/
+        padding:0; /* 패딩 없음 */
+        width:16px; /* 가로 크기 */
+        height:16px; /* 세로 크기 */
+        }
+        .subm:hover{ /* 버튼 위로 마우스 포인터 올렸을 때 스타일 */
+        background-color:#e6efc2; /* 배경색 */
+        border:1px solid #c6d880; /* 테두리 */
+        color:#529215; /* 글자색 */
+        }
+        </style>
+</head>
+
+<hr>
+<body>
+    <form action = "../php/server.php" method="post">
+        <!-- <span>아이디(스팬): </span><input type="text" title="아이디"><br>
+        <span>비밀번호(스팬): </span><input type="password" title="비밀번호"><br><br> -->
+        <input type="hidden" name="hidden" value="숨겨진 값">
+        
+        <!-- autofocus 적용 -->
+        <label for="user_id"><b>아이디: </b></label>
+        <input type="text" id="user_id" name="text" autofocus><br>
+        
+        <!-- required 적용 -->
+        <label for="password_id"><b>비밀번호: </b></label>
+        <input type="password" id="password_id" name="password" required><br>
+        
+        <!-- placeholder 적용 -->
+        <label for="text_id"><b>텍스트: </b></label>
+        <input type="text" id="text_id" name="text_2" size="20" maxlength="10" value="텍스트를 입력하세요" 
+        placeholder="텍스트를 입력하라고요"><br>
+
+        <label for="search_id"><b>검색창: </b></label>
+        <input type="search" id="search_id" name="search" size="20" value="오류는 왜 날까요?"><br>
+        
+        <!-- readonly 적용 -->
+        <label for="url_id"><b>URL 주소: </b></label>
+        <input type="url" id="url_id" name="url" value="https://www.naver.com" readonly><br>
+
+        <label for="email_id"><b>E-MAIL: </b></label>
+        <input type="email" id="email_id" name="email" value="nooya4328@gmail.com"><br>
+
+        <label for="tel_id"><b>전화번호: </b></label>
+        <input type="tel" id="tel_id" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br><br>
+
+        <label for="number_id"><b>숫자: </b></label>
+        <input type="number" id="number_id" name="number" min="10" max="50" step="1" value="17"><br>
+
+        <label for="range_id"><b>범위: </b></label>
+        <input type="range" id="range_id" name="range" min="30" max="100" step="10" value="45"><br><br>
+            
+        <hr>
+
+        <fieldset>
+            <legend><b>Ive 선택하기</b></legend>
+            <P style="color: purple;"><b>아이브 멤버 중 가장 좋아하는 멤버는?(1명만 선택 가능)</b></P>
+            <label><input type="radio" name="radio" value="안유진">안유진</label>
+            <label><input type="radio" name="radio" value="장원영">장원영</label>
+            <label><input type="radio" name="radio" value="가을">가을</label>
+        </fieldset> <br>
+        
+        <fieldset>
+            <legend><b>Ive 멤버 중 unit 조합 선택하기</b></legend>
+            <P style="color: rgb(180, 69, 69);"><b>아이브 멤번 중 가장 좋아하는 멤버는?(2명 이상 선택 가능)</b></P>
+            <label><input type="checkbox" name="checkbox[]" value="안유진">안유진</label>
+            <label><input type="checkbox" name="checkbox[]" value="장원영">장원영</label>
+            <label><input type="checkbox" name="checkbox[]" value="가을">가을</label>
+            <label><input type="checkbox" name="checkbox[]" value="레이">레이</label>
+            <label><input type="checkbox" name="checkbox[]" value="리즈">리즈</label>
+            <label><input type="checkbox" name="checkbox[]" value="이서">이서</label>
+        </fieldset><br>
+
+    <hr>
+
+        <label for="color_id" style="color: rgb(206, 94, 29);"><b> 좋아하는 color를 골라주세요: </b></label>
+        <input type="color" id="color_id" name= color value="black"> 
+        <p style="color: greenyellow;"><b> First color</b><br>
+
+    <hr> 
+        <fieldset>
+            <legend><b>날짜, 시간 - 표현하기</b></legend>
+            <p style="color:rgb(103, 52, 199);"><b>날짜와 시간을 다양하게 표현할 수 있어요</b></p>
+            <!-- min, max 적용 -->
+            <label style="color:rgb(247, 0, 255);">시작날짜: <input type="date" name="date1" id="start" value="2022-12-03" 
+                min="2022-12-01" max="2022-12-31" style="color: rgb(216, 33, 33)"> ~ </label>
+            <label>끝날짜: <input type="date" name="date2" id="end" value="2023-03-31"></label><br><br>
+
+            <label>월: <input type="month" name="month" value="2022-12"></label><br><br>
+
+            <label>주: <input type="week" name="week" value="2022-W48"></label><br><br>
+
+            <label>시작 시간: <input type="time" name="time1" id="start" value="09:00"> ~ </label>
+            <label>종료 시간: <input type="time" name="time2" id="end" value="18:00"></label><br><br>
+
+            <label>시작 시간<input type="datetime-local" name="datelocal1" id="start" value="2022-12-02T09:00"> ~ </label><br>
+            <label>종료 시간<input type="datetime-local" name="datelocal2" id="end" value="2022-12-02T23:00"></label><br>
+        </fieldset>
+    <hr>
+    <!-- select 만 적용 -->
+    <label for="class"><b>학과선택 - 단과</b></label>
+    <select id="class" name="select">
+        <option value="건축공학과">건축공학과</option>
+        <option value="기계공학과">기계공학과</option>
+        <option value="산업공학과">산업공학과</option>
+        <option value="전기전자공학과">전기전자공학과</option>
+        <option value="컴퓨터공학과" selected>컴퓨터공학과</option>
+        <option value="화학공학과">화학공학과</option>
+    </select>
+ 
+    <br><br>
+    
+    <hr>
+    <!-- select, optgroup 적용 -->
+    <label for="class_2"><b>학과선택 - 복수</b></label>
+    <select id="class_2" name="optgroup">
+        <optgroup label="공과대학">
+            <option value="건축공학과">건축공학과</option>
+            <option value="기계공학과">기계공학과</option>
+            <option value="산업공학과">산업공학과</option>
+            <option value="전기전자공학과">전기전자공학과</option>
+            <option value="컴퓨터공학과">컴퓨터공학과</option>
+            <option value="화학공학과">화학공학과</option>
+        </optgroup>
+        <optgroup label="인문대학">
+            <option value="사학과">사학과</option>
+            <option value="어문학부">어문학부</option>
+            <option value="철학">철학</option>
+            <option value="상과대학" selected>상과대학</option>         
+        </optgroup>
+    </select>
+    <br><br>
+    
+    <hr>
+    <label><b>datalist</b></label>
+    <input type="text" list="datalist_id", name="datalist">
+        <datalist id="datalist_id">
+            <option value="문법" label="문법"></option>
+            <option value="어휘" label="어휘"></option>
+            <option value="회화" label="회화"></option>
+            <option value="리스닝" label="리스닝"></option>
+            <option value="뉴스청취" label="뉴스청취"></option>
+        </datalist><br><br>
+
+    <label for="textarea"><b>자유게시판</b></label><br>
+    <!-- <input type="text" id="textarea_id" name="textarea"><br> -->
+        <textarea name="자유게시판" cols="80" row="100">자유게시판</textarea>
+
+    <ul>
+        <li>
+            <label class="reg" for="member">가입인원<small>(최대100명)</small></label>
+            <input type="number" id="member" name="member" value="1" min="0" max="100" step="1"><br>
+        </li>
+        <li>
+            <label class="reg" for="stuffs">가입상품<small>(1인당 2개)</small></label>
+            <input type="number" id="stuffs" name="goods" value="1" min="0" max="200" step="1" size="5"><br>
+        </li>
+        <li>
+            <label class="reg" for="satis">가입등급<small>(하,중,상)</small></label>
+            <input type="range" id="satis" name="grade" value="1" min="1" max="3"><br>
+        </li>
+    </ul> 
+    <hr>
+    <br><br>
+
+    <label>10초 남음</label><br>
+        <progress value="50" max="60"> </progress><br><br>
+
+    <label>진행률 30%</label><br>
+        <progress value="30" max="100"></progress><br><br>
+
+
+    <br>
+        <input type="submit" value="전송하기"><br><br>
+        <input type="reset" value="전체삭제"><br><br>
+        <input type="image" src="../pictures/button.jpg"><br><br>
+        <button type="submit" class="subm" value="버튼 태그 전송하기" >버튼 태그 전송하기</button>
+    
+    </form>
+
+
+<br><br>
+
+<label>Output 태그</label><br>
+<form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+    <input type="number" name="num1" value="0">
+    +<input type="number" name="num2" value="0">
+    =<output name="result" for="num"></output>
+</form>
+<br>
+
+
+<label>동적 사용량</label>
+<progress value="20" max="100" id="pro_bar"></progress>
+<button onclick="jbFunc()">Click</button><br>
+
+<script>
+    function jbFunc() {
+        document.getElementById('pro_bar').value='80';
+    }
+</script>
+
+</body>
+
+<br>
+<br>
+
+<!-- <body>
+    <form>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label for="mail">메일 주소</label>
+                    <input type="text" id="mail">
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <ul>
+                <li>
+                    <label for="id">아이디</label>
+                    <input type="text" id="pwd">
+                </li>
+                <li>
+                    <label for="pwd">비밀번호</label>
+                    <input type="text" id="pwd">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body> -->
+</html>

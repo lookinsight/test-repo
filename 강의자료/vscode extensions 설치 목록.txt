@@ -1,0 +1,10 @@
+HTML CSS Support
+HTML TO CSS autocompletion
+Auto Rename tag
+Auto Close tag
+code runner
+material icon theme
+open in browser
+live server
+colorize
+file utils

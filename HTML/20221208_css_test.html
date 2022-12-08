@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내부 스타일 시트</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../javascript/prefix-free.js"></script>
+
+</head>
+<div>
+    <img src="../pictures/newyork1.jpg" alt="뉴욕 가고 싶다">
+    <h1>가고 싶은 도시 1위</h1>
+    <h2 class="bluetext">뉴욕에서 지내는 활홀한 밤</h2>
+    <p>뉴욕에서는 매일 밤 뮤지컬과 스포츠 ... 열립니다</p><br><br>
+    <p class="text_1" id="text_2">뉴욕에 있는 윌리엄씨는 <span class="redtext">뉴욕의 거리를 걷고 싶은 승민이는...</span>의 기사에 따르면... 합니다</p>
+    <p class="text_1">뉴욕 타임스퀘어</p>
+    <p id="text_2">뉴욕 타임스퀘어</p>
+    <p id="text_2" class="text_1">뉴욕 타임스퀘어</p>
+    <p class="text_1" id="text_2" style="color: black;">뉴욕 타임스퀘어</p> 
+    <!-- Class -> ID -> Inline 순서로 받아 들임(Overwrite) -->
+    <!-- 어떤 속성 값이 Overwrite되기 싫다면? !inportant -->
+
+    <h2>뉴욕 거리에서의 자유로움</h2>..
+    <p><span class="redtext">뉴욕 메츠와 뉴욕 양키즈 야구 경기도 관람하고..</span>뉴욕양키즈 저지는 어디로 갈까요?</p>
+    <!-- <ul style="color: blue"; list-style-type: square; font-size: 30px;>  외부스타일선택자  -->
+    <br>
+    <div id = "container"></div>
+    <ul>    
+        <li>뉴욕(USA), 미국</li>
+        <li>브로드웨이 42번가</li>
+        <li>LA도 가고 싶음</li>
+    </ul>
+
+    <hr>
+    <div class="content">
+        <h1>제목 제목 제목 제목</h1>
+        <p>이동하고자 하는 사이트는 <b>네이버</b>입니다</p>
+        <a href="http://www.naver.com" target="_blank">이동하기</a>
+        <br>
+        <button>버튼 입니다</button><br><br>
+    </div>
+    <hr>
+    <!-- 상속에는 적용되는 태그와 안되는 태그가 있음 -->
+    
+    <hr>
+    <br><br><br><br><br><br>
+    <div class="box">Mouse Over</div>
+    <hr>
+    <!-- 상속의 자식코드 알기 -->
+    <div id="test">
+        <p>안녕하세요 111.</p>
+        <div>
+            <p>안녕하세요 222.</p>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <p style="font-size: 30px;">기본 글꼴 테스트 중</p>
+    <p id="font_text">나눔 고딕 글꼴 테스트</p>
+    <br>
+    <hr>
+    <p>글자 크기 테스트</p>
+    <p class="text1">글자 크기 테스트</p>
+    <p class="text2">글자 크기 테스트</p>
+    <p class="text3">글자 크기 테스트</p>
+    <br>
+    <hr>
+    <h1>세계 3대 미항</h1>
+    <p><span class="accent">시드니(Sydney)</span>, 호주</p>
+    <p><span class="accent">리우데자네이루(Rio de Janeiro)</span>, 브라질</p>
+    <p><span class="accent">나폴리(Naples)</span>, 이탈리아</p>
+    <br>
+    <hr>
+
+    <h2>한소희 이쁨</h2>
+    <p> [<a href="http://www.sportsseoul.com/news/read/1183880"
+    target="_blank">한소희 링크</a>]</p>
+    <p>한소희가 영국에서 해외 스타들을 모두 이김 <span class="edited">여신
+    </span> 하늘에서 내려 온 천사가 있어 </p>
+    <span class="removed">소희소희 한소희</span>
+    <br>
+    <hr>
+    <h1>Have to study</h1>
+        <ul>
+            <li class="trans1" style="color: black;">html</li>
+            <li class="trans2" style="color: black;">css</li>
+            <li class="trans3" style="color: black">javascript</li>
+        </ul>
+    <br>
+    <hr>
+    <h1 class="shadow1">HTML5</h1>
+    <h1 class="shadow2">HTML5</h1>
+    <h1 class="shadow3">HTML5</h1>
+    <br>
+    <hr>
+
+    <h1>HTML5</h1>
+    <h1 class="letter1">HTML5</h1>
+    <h1 class="letter2">HTML5</h1>
+
+    <br>
+    <hr>
+    <img src="../pictures/한소희1.jpg">
+    <p class="align-left">왼쪽 정렬</p>
+    <p class="align-right">오른쪽 정렬</p>
+    <p class="align-center">중양 정렬</p>
+    <p class="align-justfy">맞춤 정렬</p>
+    <br>
+    <hr>
+    <p>블루베리는 비타민A, …… </p>
+    <p class="indent1">블루베리는 비타민A, …… </p>
+    <p class="indent2">블루베리는 비타민A, …… </p>
+    <br>
+    <hr>
+    <p>블루베리의 대표적인 기능은 …… </p>
+    <p class=“small-line">블루베리의 대표적인 기능은 …… </p>
+    <p class=“bi">블루베리의 대표적인 기능은 …… </p>
+    <br>
+    <hr>
+    <p class="content">귀리는 베타글루칸(항암 및 면역증강작용을 가지고 있
+        는 불소화성 다당류) 성분을 포함하고 있다.</p>
+    <hr>
+    <br>
+    <p id="tags">들여쓰기, 폰트글씨 크기, 줄간격이 적용된 텍스트</p>
+    <p class="content">글자를 길게 적용했을 때 어떻게 되는지 보는 것</p>
+    <ol class="list-type_1">
+        <li> 한소희 </li>
+        <li> 우영우 </li>
+    </ol>
+    <ol class="list_type_2">
+        <li> 한소희 </li>
+        <li> 우영우 </li>
+    </ol>
+    <ol type="I">
+        <li> 한소희 </li>
+        <li> 우영우 </li>
+    </ol>
+    <br>
+    <hr>
+    <ol class="book1">
+        <li>Do it! 시리즈</li>
+        <li>된다 시리즈</li>
+        <li>DCM 프로 사진가</li>
+        <li>데이터과학 시리즈</li>
+    </ol>
+    <ol class="book2">
+        <li>Do it! 시리즈</li>
+        <li>된다 시리즈</li>
+        <li>DCM 프로 사진가</li>
+        <li>데이터과학 시리즈</li>
+    </ol>
+    <br>
+    <hr>
+    <h3> list-style-position을 지정하지 않음</h3>
+    <ul> …… </ul>
+    <h3> list-style-position : inside</h3>
+    <ul class="inside"> …… </ul>
+</body>
+</html>
